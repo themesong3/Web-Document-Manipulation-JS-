@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create mobile phone</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Create mobile phone</h1>
+		<button id = "show-phone">Show phone information</button>
+		<script>
+			const phone = {
+				model: "iPhone 11 Pro",
+				year: 2018,
+				broken: false,
+				previousOwners: ["Tim Dillon", "Joe Rogan"],
+				specs: {
+					Width: "2.81 inches (71.4 mm)",
+					Height: "5.67 inches (144.0 mm)",
+					Depth: "0.32 inch (8.1 mm)",
+					Weight: "6.63 ounces (188 grams)"
+				}
+			}
+
+
+			var btn = document.getElementById("show-phone")
+			btn.onclick = function(){
+				alert(JSON.stringify(phone))
+			}
+		</script>
+		
+	</body>
+</html>

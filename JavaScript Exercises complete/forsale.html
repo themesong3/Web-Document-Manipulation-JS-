@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Houses for sale</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Houses for sale</h1>
+		<script>
+			class House
+			{
+				constructor(bedrooms, facilities = [], price, address, phone, changePrice, addFacility, description)
+				{
+					this.bedrooms = bedrooms;
+					this.facilities = facilities;
+					this.price = price;
+					this.address = address;
+					this.phone = phone;
+
+					this.changePrice = function(val)
+					{this.price = val};
+
+					this.addFacility = function(fac)
+					{this.facilities.push(fac)};
+
+					this.description = function()
+					{
+						var info = `
+						Bedrooms: ${this.bedrooms}\n
+						Facilities: ${this.facilities}\n
+						Price: ${this.price}\n
+						Address: ${this.address}\n
+						Phone: ${this.phone}\n`
+						return info
+					}
+
+				}
+			}
+			house1 = new House(4, ["garden", "garage", "swimmng pool"], 340000, "Tartakow 5 Rzeszow", "607 881 442")
+			console.log(house1)
+			house1.changePrice(360000)
+			console.log(house1.description())
+
+
+
+		</script>
+	</body>
+</html>

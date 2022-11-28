@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create methods</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Create methods</h1>
+		<script>
+			var myArray = {
+					arr: [3,4,76,1,5,787,33,76,1,99,45,235,53,23],
+					min: function(){return this.arr.sort()[0]},		
+					max: function(){return this.arr.sort()[this.arr.length - 1]},
+					avg: function(){
+						sum = 0
+						for (i = 0; i < this.arr.length; i++)
+						{
+							sum += this.arr[i]
+						}
+						return parseFloat(sum) / parseFloat(this.arr.length)
+					},
+					lth: function(val){
+						c = 0
+						newArr = this.arr.sort()
+						for (i = 0; i < newArr.length; i++)
+						{
+							if (newArr[i] < val)
+							{
+								c++
+							}
+						}
+						return c
+					}
+			};
+			
+			console.log("MIN: " + myArray.min())
+			console.log("MAX: " + myArray.max())
+			console.log("AVG: " + myArray.avg())
+			console.log("lth 36: " + myArray.lth(36))
+		</script>
+	</body>
+</html>

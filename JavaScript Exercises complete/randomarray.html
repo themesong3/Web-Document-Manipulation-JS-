@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>An array</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>An array</h1>
+		<script>
+			function isOrdered(array)
+			{
+				for (i = 0; i < 4; i++)
+				{
+					if (array[i] > array[i+1])
+					{
+						return false
+					}
+				}
+				return true
+			}
+
+			var myArray = []
+			for (i = 0; i < 5; i++)
+			{
+				x = Math.floor(Math.random()*5)
+				myArray.push(x)
+			}
+			console.log(myArray)
+
+			if (isOrdered(myArray))
+			{
+				console.log("Array is sorted")
+			}
+			else
+			{
+				console.log("Array is NOT sorted")
+			}
+
+		</script>
+	</body>
+</html>

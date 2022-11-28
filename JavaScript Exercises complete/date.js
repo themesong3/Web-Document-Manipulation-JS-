@@ -1,0 +1,4 @@
+function showDate()
+{
+    alert(Date())
+}

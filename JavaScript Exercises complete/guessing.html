@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Try to guess</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Try to guess</h1>
+
+		<script>
+			var number = Math.floor(Math.random()*6)
+			var guess = parseInt(prompt("What is your guess ?"))
+			console.log(number)
+			if (guess == number)
+			{
+				alert("Good Work")
+			}
+			else
+			{
+				alert("Sorry")
+			}
+		</script>
+	</body>
+</html>
